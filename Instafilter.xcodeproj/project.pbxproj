@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		533BF72D2649679600AF31FB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533BF72C2649679600AF31FB /* ImagePicker.swift */; };
+		533BF72E2649679600AF31FB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533BF72C2649679600AF31FB /* ImagePicker.swift */; };
 		5385D3BE2645616F00A1B8D7 /* InstafilterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5385D3AB2645616E00A1B8D7 /* InstafilterApp.swift */; };
 		5385D3BF2645616F00A1B8D7 /* InstafilterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5385D3AB2645616E00A1B8D7 /* InstafilterApp.swift */; };
 		5385D3C02645616F00A1B8D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5385D3AC2645616E00A1B8D7 /* ContentView.swift */; };
@@ -16,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		533BF72C2649679600AF31FB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5385D3AB2645616E00A1B8D7 /* InstafilterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterApp.swift; sourceTree = "<group>"; };
 		5385D3AC2645616E00A1B8D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5385D3AD2645616F00A1B8D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 				5385D3AB2645616E00A1B8D7 /* InstafilterApp.swift */,
 				5385D3AC2645616E00A1B8D7 /* ContentView.swift */,
 				5385D3AD2645616F00A1B8D7 /* Assets.xcassets */,
+				533BF72C2649679600AF31FB /* ImagePicker.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -187,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				533BF72D2649679600AF31FB /* ImagePicker.swift in Sources */,
 				5385D3C02645616F00A1B8D7 /* ContentView.swift in Sources */,
 				5385D3BE2645616F00A1B8D7 /* InstafilterApp.swift in Sources */,
 			);
@@ -196,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				533BF72E2649679600AF31FB /* ImagePicker.swift in Sources */,
 				5385D3C12645616F00A1B8D7 /* ContentView.swift in Sources */,
 				5385D3BF2645616F00A1B8D7 /* InstafilterApp.swift in Sources */,
 			);

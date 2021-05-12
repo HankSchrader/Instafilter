@@ -20,6 +20,12 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>Fun</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need to use the photo library</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Need to save images.</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 </dict>
