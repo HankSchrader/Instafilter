@@ -15,6 +15,7 @@ struct ContentView: View {
     @State private var filterIntensity = 5.0
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
+    @State private var currentFilterName: String?
     
     @State private var currentFilter: CIFilter = CIFilter.sepiaTone()
     @State private var processedImage: UIImage?
@@ -56,10 +57,10 @@ struct ContentView: View {
                     Slider(value: intensity)
                 }.padding(.vertical)
                 HStack {
-                    Button("Change Filter") {
+                    Button(self.currentFilterName ?? "Choose Filter") {
                         self.showingFilterSheet = true
                         applyProcessing()
-                    }
+                    }.disabled(self.image == nil)
 
                 }
                 Spacer()
@@ -78,9 +79,9 @@ struct ContentView: View {
                     imageSaver.writeToPhotoAlbum(image: processedImage)
                 }
             }
+            .navigationBarTitle("Instafilter")
         }
         .padding([.horizontal, .bottom])
-        .navigationTitle("Instafilter")
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
             ImagePicker(image: self.$inputImage)
         }
@@ -110,8 +111,11 @@ struct ContentView: View {
     
     //- Returns: void
     func applyProcessing() {
+        
         let inputKeys = currentFilter.inputKeys
-        if inputKeys.contains(kCIInputIntensityKey) { currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey) }
+        if inputKeys.contains(kCIInputIntensityKey) {
+            currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey)
+        }
         if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey) }
         if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey) }
 
@@ -125,6 +129,8 @@ struct ContentView: View {
     }
     
     func setFilter(_ filter: CIFilter) {
+
+        self.currentFilterName = filter.name
         currentFilter = filter
         loadImage()
     }
